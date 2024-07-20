@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "lefthook:refresh": "lefthook uninstall && lefthook install",
     "dev": "node sw-env-build.js && next dev",
     "build": "node sw-env-build.js && next build",
     "cloudflare:build": "node sw-env-build.js && npx @cloudflare/next-on-pages@1",

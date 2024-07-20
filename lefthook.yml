@@ -1,0 +1,22 @@
+pre-push:
+  commands:
+    packages-audit:
+      tags: frontend security
+      run: npm audit --audit-level=high
+
+pre-commit:
+  parallel: true
+  commands:
+    format-frontend:
+      root: apps/frontend
+      glob: '*.{js,jsx,ts,tsx,md,mdx,html,css,scss,json,yml}'
+      run: npx prettier {staged_files} --write
+    lint-frontend:
+      root: apps/frontend
+      run: npm run lint:fix
+
+# Use this to validate commit messages
+commit-msg:
+  commands:
+    'lint commit message':
+      run: npx --no -- commitlint --edit "$1"
