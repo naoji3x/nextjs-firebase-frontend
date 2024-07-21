@@ -1,8 +1,18 @@
 {
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
   "extends": [
-    "../../.eslintrc.json",
+    "prettier",
     "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:storybook/recommended",
     "plugin:storybook/recommended"
-  ]
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "off"
+  }
 }
