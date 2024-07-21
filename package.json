@@ -13,7 +13,11 @@
     "format": "prettier --write .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "shadcn": "npx shadcn-ui@latest add"
+    "shadcn": "npx shadcn-ui@latest add",
+    "tf:init": "(cd scripts/terraform && terraform init)",
+    "tf:env": "node scripts/terraform/env-build.js",
+    "tf:plan": "npm run tf:init && (cd scripts/terraform && terraform plan -var-file=development.tfvars -var-file=env.tfvars)",
+    "tf:apply": "npm run tf:init && (cd scripts/terraform && terraform apply -var-file=development.tfvars -var-file=env.tfvars)"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "1.1.2",
