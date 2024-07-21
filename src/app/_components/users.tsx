@@ -1,6 +1,6 @@
 'use client'
 
-import { firestore } from '@todo-app/firebase-client/firebase'
+import { firestore } from '@/features/firebase/client'
 import { collection, onSnapshot } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 

@@ -1,6 +1,6 @@
 'use client'
-import { functions } from '@todo-app/firebase-client/firebase'
-import { Auth } from '@todo-app/types'
+import { functions } from '@/features/firebase/client'
+import { Auth } from '@/types/auth'
 import { httpsCallable } from 'firebase/functions'
 import { useEffect, useState } from 'react'
 
