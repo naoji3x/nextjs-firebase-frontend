@@ -10,6 +10,16 @@ if (process.env.NODE_ENV === 'development') {
 // code for cloudflare development -- end
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  webpack: (config, { isServer }) => {
+    // Exclude test files from the build
+    config.module.rules.push({
+      test: /\.(test|stories)\.(js|jsx|ts|tsx)$/,
+      loader: 'ignore-loader'
+    })
+
+    return config
+  }
+}
 
 export default nextConfig

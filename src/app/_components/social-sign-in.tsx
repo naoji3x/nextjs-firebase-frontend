@@ -16,6 +16,11 @@ export const metadata: Metadata = {
 }
 
 const SocialSignIn = () => {
+  const handleSignIn = async () => {
+    'use server'
+    await signIn('google')
+  }
+
   return (
     <section className="pb-2 bg-white">
       <div className="container mx-auto px-4">
@@ -31,12 +36,7 @@ const SocialSignIn = () => {
             </CardHeader>
             <CardContent className="grid">
               <div className="flex items-center mx-auto">
-                <form
-                  action={async () => {
-                    'use server'
-                    await signIn('google')
-                  }}
-                >
+                <form action={handleSignIn}>
                   <GoogleSignInButton type="submit" />
                 </form>
               </div>

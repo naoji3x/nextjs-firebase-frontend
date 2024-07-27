@@ -37,6 +37,7 @@
     "gcloud",
     "ionicons",
     "joshuanianji",
+    "lcov",
     "lefthook",
     "lucide",
     "mhutchie",
@@ -45,8 +46,10 @@
     "pullstate",
     "signin",
     "signout",
+    "tcono",
     "tfvars",
     "typegen",
-    "unifiedjs"
+    "unifiedjs",
+    "unmocked"
   ]
 }
