@@ -51,6 +51,7 @@ const TodoCard = ({
             defaultChecked={done}
             checked={checked}
             onCheckedChange={handleCheckboxChange}
+            aria-label="done"
           />
         </CardTitle>
       </CardHeader>
@@ -78,7 +79,11 @@ const TodoCard = ({
         </form>
       </CardContent>
       <CardFooter className="flex justify-end">
-        <Button variant="destructive" onClick={() => onDelete(id)}>
+        <Button
+          variant="destructive"
+          onClick={() => onDelete(id)}
+          aria-label="delete"
+        >
           削除
         </Button>
       </CardFooter>

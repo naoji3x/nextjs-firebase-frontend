@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import TimePicker from './time-picker'
 
 const meta = {
-  title: 'components/TimePicker',
+  title: 'components/elements/TimePicker',
   component: TimePicker,
   parameters: {
     layout: 'centered'
@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    date: new Date(),
+    date: new Date('2024-01-01T12:30'),
     onValueChange: (date: Date) => console.log(date)
   }
 }

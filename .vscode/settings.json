@@ -50,6 +50,7 @@
     "tfvars",
     "typegen",
     "unifiedjs",
-    "unmocked"
+    "unmocked",
+    "Viewports"
   ]
 }
